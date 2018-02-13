@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>CSS:regression</title>
+    <link rel="stylesheet" type="text/css" href="build/build.css">
+  </head>
+  <!-- open http://huddle.github.io/Resemble.js/-->
+  <!-- open https://github.com/Huddle/Resemble.js/-->
+  <!-- open https://github.com/garris/BackstopJS-->
+  <body>
+    <article>
+      <section>
+        <div style="display: inline-block"><img src="images/css3badge.png" width="180px" style="border-radius: 5px" class="right"></div><br>
+        <h2 style="font-size: 250%;"><span style="color: #aaccaa">CSS:regression</span></h2>
+        <!--span.small 0.7.1--><br>
+      </section>
+      <section><br>
+        <h2>Quick Intro</h2>
+        <li></li>
+        <li>Rob Pocklington</li>
+        <li>Java, Ruby, Groovy, Scala, Node + JS</li>
+        <li>Worked at <span style="color: #6699ff">MYOB</span>, <span style="color: #66aaff">Sportsbet</span>, <span style="color: #99ccff">Seek</span> and <span style="color: #66ccee">NAB</span></li>
+        <li>Frontend Development Lead @ <span style="color: #66ccee">AGL</span></li>
+        <li></li>
+      </section>
+      <section><br>
+        <h2 style="color: #ddcc88">Breakdown</h2>
+        <li style="height: 10px"></li>
+        <li>Overview</li>
+        <li>Tooling</li>
+        <li>Features</li>
+        <li>Setup</li>
+        <li>Demo</li>
+        <li>How to Automate</li>
+        <li>Discoveries</li>
+        <li>Closing Thoughts</li>
+        <li></li>
+      </section>
+      <section>
+        <li>
+          <h2 style="color: #cc88aa">Overview</h2>
+        </li>
+        <li></li>
+        <li>You've got a clean codebase&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9989;</li>
+        <li>You've automated your unit tests&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9989;</li>
+        <li>You have a good code review practice&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9989;</li>
+        <li>You've automated the most important user flows&nbsp;&nbsp;&nbsp;&nbsp;&#9989;<br/><br/><br/></li>
+      </section>
+      <section>
+        <div style="position: absolute; left: 30px; top: 33px">
+          <div>Before Deployment</div><img src="images/melbjs.png" width="300px" style="display: inline-block; border-radius: 5px">
+        </div>
+        <div style="position: absolute; left: 380px; top: 33px">
+          <div>After Deployment</div><img src="images/melbjsbroken.png" width="300px" style="display: inline-block; border-radius: 5px">
+        </div>
+      </section>
+      <section>
+        <li>
+          <h2 style="color: #cc88aa">Overview (cont ...)</h2>
+        </li>
+        <li></li>
+        <li>Prod isn't <b>broken</b> - but it doesn't look like Invision, why?<br/><br/></li>
+        <li>It's not always the Javascript or logic that blows up</li>
+        <li>... it's the HTML</li>
+        <li>... or the CSS<br/><br/><br/><br/></li>
+      </section>
+      <section>
+        <li>
+          <h2 style="color: #cc88aa">Testing margin and padding<br/>isn't that important</h2>
+        </li>
+        <li></li>
+        <li>... unless it causes your login button to disappear</li>
+        <li>or legal terms and conditions are off-screen or ellip...<br/><br/><br/><br/></li>
+      </section>
+      <section>
+        <li>
+          <h2 style="color: #cc88aa">It's 2018 - it's a jungle out there!</h2>
+        </li>
+        <li></li>
+        <li>Hardware, OS, screen-size, pixel density, browser engine ...</li>
+        <li>You can't test <b>everything</b><br/><br/></li>
+        <li>... but if your only focus is testing functionality</li>
+        <li>... the visuals can still be broken</li>
+      </section>
+      <section><img src="images/morpheus.jpg" width="600px" style="border-radius: 5px" class="right"></section>
+      <section>
+        <li>
+          <h2 style="color: #66aaff">Backstop.js</h2>
+        </li>
+        <li style="font-size: 20px">Screenshotter / Comparison Tool / Reporter<br/><br/></li>
+        <li>Uses <a href="https://github.com/Huddle/Resemble.js/">Resemble.js</a><br/><br/></li>
+        <li></li>
+      </section>
+      <section>
+        <li>
+          <h2 style="color: #8888cc">Features</h2>
+        </li>
+        <li></li>
+        <li>Takes Screenshosts: with Firefox or Chrome</li>
+        <li>Multi-platform: works on Windows, Mac or Linux</li>
+        <li>Custom breakpoints: (mobile, tablet, desktop etc.)</li>
+        <li>Filter (include / exclude) capture regions via CSS selectors<br/><br/><br/></li>
+      </section>
+      <section>
+        <li>
+          <h2 style="color: #8888cc">Features (cont ...)</h2>
+        </li>
+        <li></li>
+        <li>Single Page App compatible</li>
+        <li>Supports cookies, custom event hooks, waits or ready checks</li>
+        <li>Very quick - runs in parallel browser instances</li>
+        <li>Customisable threshold levels for comparisons<br/><br/></li>
+        <li>JUnit Report - good for CI</li>
+        <li>HTML Report  - better for humans =)<br/><br/></li>
+      </section>
+      <section>
+        <li>
+          <h2 style="color: #cc99cc">Setup</h2>
+        </li>
+        <li></li>
+        <li>One config file &nbsp;<code><b>backstop.json</b></code></li>
+        <li>An array of <b>scenarios</b> to capture screenshots</li>
+        <li>Run <code><b>backstop test</b></code> to capture <b>screenshots</b></li>
+        <li>Run <code><b>backstop approve</b></code> to accept changes<br/><br/><br/></li>
+      </section>
+      <section>
+        <h2 style="color: #99cc00">Demo<br/><br/><br/><br/><br/><br/></h2>
+      </section>
+      <section>
+        <h2 style="color: #99cc00">How to Automate<br/><br/></h2><img src="images/process.png" width="750px" style="border-radius: 5px" class="right">
+      </section>
+      <section>
+        <h2 style="color: #99cc00">How to Automate (cont ...)<br/><br/></h2>
+        <li>Fail the build if&nbsp;&nbsp;<code><b>backstop test</b></code>&nbsp;&nbsp;fails</li>
+        <li>Publish the HTML Report as an artifact on the build</li>
+        <li>Developer inspects the changes, approves or fixes issues</li>
+      </section>
+      <section>
+        <h2 style="color: #ccaa33">Discoveries</h2>
+        <li></li>
+        <li>May need multiple <code><b>backstop.json</b></code> files for various reasons<br/></li>
+        <li>Font rendering is significantly different between<br/>Win / Mac / Linux :(<br/><br/></li>
+        <li>Solution #1 - run all <b>Backstop.js</b> tasks in Docker</li>
+        <li>Solution #2 - have a CI task to approve and commit changes</li>
+      </section>
+      <section>
+        <h2 style="color: #aa99ff">Ideas and Future plans</h2>
+        <li></li>
+        <li>Test a version of the site without CSS (HTML only)</li>
+        <li>Emulate <b>IPhone</b> and <b>Android</b> devices</li>
+        <li>Dynamically build <code><b>backstop.json</b></code> files</li>
+        <li>Auto-publish comparison reports to a Slack channel<br/><br/><br/></li>
+      </section>
+      <section>
+        <h2 style="color: #aa99ff">Closing thoughts<br/></h2>
+        <li></li>
+        <li>Of all these tools, <b>Backstop.js</b> has the best reports</li>
+        <li>it has an active and well-maintained repository<br/><br/></li>
+        <li>Automates a time-consuming but important task in our process</li>
+        <li>Enables easier visual reviews for all team members<br/><br/><br/></li>
+      </section>
+      <section>
+        <h2 style="color: #aa99ff">Questions?<br/><br/><br/><br/><br/><br/><br/></h2>
+      </section>
+      <section>
+        <h2 style="color: #66eeaa">Thanks for listening!<br/><br/></h2>
+        <li>Slides<br/><b>rp.js.org/css-regression-pres/</b><br/><br/>Twitter<br/><b>@melbjs @rpocklin</b></li>
+        <li></li>
+        <li><span style="color: #66ccee">AGL</span> are hiring (Javascript / Typescript / .NET Developers and Testers)<br/></li>
+      </section>
+    </article>
+    <script src="build/build.js"></script>
+  </body>
+</html>
